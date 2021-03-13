@@ -1,0 +1,22 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+# Home Assistant Community Store
+hacs:
+  token: 0b3193a4e4a8325c9fe1dc7b93ddc43761ec9d76
+
+# DuckDNS
+http:
+  base_url: https://haukassistant.duckdns.org
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml

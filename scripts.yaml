@@ -1,0 +1,6 @@
+'1614533374915':
+  alias: Neues Skript
+  sequence:
+  - service: camera.snapshot
+    data: {}
+  mode: single
