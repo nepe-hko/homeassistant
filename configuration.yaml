@@ -32,3 +32,4 @@ cloud:
     entity_config:
       switch.yamaha_receiver:
         display_categories: MUSIC_SYSTEM
+# testcomment
