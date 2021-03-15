@@ -1,0 +1,6 @@
+2021-03-15 20:03:35 WARNING (MainThread) [homeassistant.loader] You are using a custom integration hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2021-03-15 20:03:37 WARNING (MainThread) [homeassistant.components.http] The 'base_url' option is deprecated, please remove it from your configuration
+2021-03-15 20:04:03 WARNING (MainThread) [homeassistant.loader] You are using a custom integration alexa_media which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2021-03-15 20:04:04 WARNING (MainThread) [homeassistant.setup] Setup of hacs is taking over 10 seconds.
+2021-03-15 20:04:04 ERROR (MainThread) [homeassistant.components.calendar] Entity id already exists - ignoring: calendar.geburtstage
+2021-03-15 20:04:07 WARNING (MainThread) [homeassistant.components.calendar] Setup of calendar platform google is taking over 10 seconds.

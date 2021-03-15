@@ -1,0 +1,56 @@
+
+- cal_id: e_2_de#weeknum@group.v.calendar.google.com
+  entities:
+  - device_id: kalenderwochen
+    ignore_availability: true
+    name: Kalenderwochen
+    track: true
+
+- cal_id: ksuop8hg88orhfqe2ih541730k@group.calendar.google.com
+  entities:
+  - device_id: job
+    ignore_availability: true
+    name: Job
+    track: true
+
+- cal_id: de.german#holiday@group.v.calendar.google.com
+  entities:
+  - device_id: feiertage_in_deutschland
+    ignore_availability: true
+    name: Feiertage in Deutschland
+    track: true
+
+- cal_id: addddddddddi@gmail.com
+  entities:
+  - device_id: daniels_kalender
+    ignore_availability: true
+    name: Daniels Kalender
+    track: true
+
+- cal_id: ff38b9u0or49tairdmd8do0om4@group.calendar.google.com
+  entities:
+  - device_id: vorgemerkt
+    ignore_availability: true
+    name: Vorgemerkt
+    track: true
+
+- cal_id: jsutap6g5qapd2q1u5f26fgp9k@group.calendar.google.com
+  entities:
+  - device_id: geburtstage
+    ignore_availability: true
+    name: Geburtstage
+    track: true
+
+- cal_id: addressbook#contacts@group.v.calendar.google.com
+  entities:
+  - device_id: geburtstage
+    ignore_availability: true
+    name: Geburtstage
+    track: true
+
+- cal_id: k3nj16i0mhqmh9j3cj6mvlnonc@group.calendar.google.com
+  entities:
+  - device_id: s_d
+    ignore_availability: true
+    name: S&D
+    track: true

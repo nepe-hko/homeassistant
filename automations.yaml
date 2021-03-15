@@ -1,0 +1,18 @@
+- id: '1614534843060'
+  alias: Benachrichtigen bei schlechter Luft
+  description: ''
+  trigger:
+  - type: value
+    platform: device
+    device_id: f581ad6ccf26c1229b13c610ef91371c
+    entity_id: sensor.netatmo_p58_indoor_co2
+    domain: sensor
+    above: 1000
+  condition: []
+  action:
+  - device_id: c3374f0b08c28a4ce8bc50b8db31a4b3
+    domain: mobile_app
+    type: notify
+    message: es sind über 1000ppm im Zimmer
+    title: Lüften
+  mode: single

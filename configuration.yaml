@@ -1,0 +1,34 @@
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+# Home Assistant Community Store
+hacs:
+  token: !secret hacs_token
+
+# DuckDNS
+http:
+  base_url: !secret base_url
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+
+# Google Calendar
+google:
+  client_id: !secret google_client_id_calendar
+  client_secret: !secret google_client_secret_calendar
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+# Alexa
+# https://www.nabucasa.com/config/amazon_alexa/
+cloud:
+  alexa:
+    entity_config:
+      switch.yamaha_receiver:
+        display_categories: MUSIC_SYSTEM

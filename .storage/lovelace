@@ -1,0 +1,188 @@
+{
+    "version": 1,
+    "key": "lovelace",
+    "data": {
+        "config": {
+            "title": "Daniel",
+            "views": [
+                {
+                    "path": "default_view",
+                    "title": "Home",
+                    "cards": [
+                        {
+                            "type": "sensor",
+                            "entity": "sensor.netatmo_p58_indoor_co2",
+                            "graph": "line",
+                            "detail": 2
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.fenster"
+                                },
+                                {
+                                    "entity": "switch.yamaha_receiver"
+                                },
+                                {
+                                    "entity": "sensor.thermostat_heating"
+                                }
+                            ],
+                            "state_color": false,
+                            "show_header_toggle": false
+                        },
+                        {
+                            "type": "light",
+                            "entity": "light.licht"
+                        },
+                        {
+                            "type": "sensor",
+                            "entity": "sensor.netatmo_p58_indoor_temperature",
+                            "graph": "line",
+                            "detail": 2
+                        },
+                        {
+                            "type": "sensor",
+                            "graph": "line",
+                            "entity": "sensor.netatmo_p58_indoor_humidity",
+                            "detail": 2
+                        },
+                        {
+                            "type": "entities",
+                            "show_header_toggle": false,
+                            "entities": [
+                                {
+                                    "entity": "light.licht_ambilight"
+                                },
+                                {
+                                    "type": "custom:rgb-light-card",
+                                    "entity": "light.licht_ambilight",
+                                    "colors": [
+                                        {
+                                            "rgb_color": [
+                                                255,
+                                                127,
+                                                255
+                                            ],
+                                            "brightness": 220,
+                                            "transition": 1
+                                        },
+                                        {
+                                            "hs_color": [
+                                                60,
+                                                30
+                                            ],
+                                            "icon_color": "#fff8b0"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "history-graph",
+                            "title": "Temperatur/Luftfeuchte",
+                            "entities": [
+                                "sensor.netatmo_p58_indoor_temperature",
+                                "sensor.netatmo_p58_indoor_humidity"
+                            ],
+                            "hours_to_show": 24,
+                            "refresh_interval": 0
+                        },
+                        {
+                            "type": "custom:apexcharts-card",
+                            "experimental": {
+                                "color_threshold": true,
+                                "brush": true
+                            },
+                            "graph_span": "7d",
+                            "brush": {
+                                "selection_span": "24h",
+                                "apex_config": null
+                            },
+                            "series": [
+                                {
+                                    "entity": "sensor.netatmo_p58_indoor_co2",
+                                    "color": "none",
+                                    "type": "area",
+                                    "stroke_width": 1,
+                                    "color_threshold": [
+                                        {
+                                            "value": 2000,
+                                            "color": "red"
+                                        },
+                                        {
+                                            "value": 1200,
+                                            "color": "yellow"
+                                        },
+                                        {
+                                            "value": 500,
+                                            "color": "green"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "entity": "sensor.netatmo_p58_indoor_co2",
+                                    "color": "yellow",
+                                    "stroke_width": 2,
+                                    "float_precision": 0,
+                                    "show": {
+                                        "in_brush": true,
+                                        "in_chart": false
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "custom:mini-graph-card",
+                            "entities": [
+                                "sensor.netatmo_p58_indoor_co2"
+                            ],
+                            "name": "CO2",
+                            "smoothing": true,
+                            "height": 200,
+                            "hours_to_show": 24,
+                            "points_per_hour": 2,
+                            "decimals": 0,
+                            "hour24": true,
+                            "animate": true,
+                            "show": {
+                                "labels": true,
+                                "name": false,
+                                "icon": false,
+                                "state": true,
+                                "graph": true
+                            },
+                            "color_thresholds": [
+                                {
+                                    "value": 800,
+                                    "color": "#f39c12"
+                                },
+                                {
+                                    "value": 1500,
+                                    "color": "#d35400"
+                                },
+                                {
+                                    "value": 2500,
+                                    "color": "#c0392b"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "calendar",
+                            "entities": [
+                                "calendar.geburtstage"
+                            ],
+                            "initial_view": "listWeek"
+                        }
+                    ]
+                },
+                {
+                    "title": "Home 2",
+                    "path": "home-2",
+                    "badges": [],
+                    "cards": []
+                }
+            ]
+        }
+    }
+}
