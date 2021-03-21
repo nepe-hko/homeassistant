@@ -40,6 +40,7 @@
     ignore_availability: true
     name: Geburtstage
     track: true
+    max_results: 10
 
 - cal_id: addressbook#contacts@group.v.calendar.google.com
   entities:
@@ -47,6 +48,7 @@
     ignore_availability: true
     name: Geburtstage
     track: true
+    max_results: 10
 
 - cal_id: k3nj16i0mhqmh9j3cj6mvlnonc@group.calendar.google.com
   entities:
