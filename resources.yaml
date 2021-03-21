@@ -1,2 +1,4 @@
 - url: /local/apexcharts-card.js?v=1.8.2
   type: module
+- url: /local/lovelace-roomba-vacuum-card
+  type: module
